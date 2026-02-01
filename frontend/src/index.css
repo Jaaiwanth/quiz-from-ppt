@@ -1,0 +1,12 @@
+.hello {
+  display: block;
+  margin: 10px 0;
+}
+
+.correct {
+  background: lightgreen;
+}
+
+.selected-wrong {
+  background: salmon;
+}
