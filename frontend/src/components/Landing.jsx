@@ -1,4 +1,4 @@
-import "../Landing.css";
+import "../styles/Landing.css";
 
 function Landing({ setPage }) {
   return (
@@ -9,7 +9,7 @@ function Landing({ setPage }) {
         </h1>
 
         <p className="landing-subtitle">
-          A React-based quiz app that dynamically fetches trivia questions from the Open Trivia Database API.
+          A React-based quiz app that dynamically fetches trivia questions from the Gemini API.
         </p>
 
         <button

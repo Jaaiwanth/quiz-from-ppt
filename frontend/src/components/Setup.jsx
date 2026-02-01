@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Setup.css";
+import "../styles/Setup.css";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 console.log("API_BASE_URL =", API_BASE_URL);
@@ -35,11 +35,7 @@ function Setup({ setPage, setQuizData }) {
       if (!data.quiz) {
         throw new Error("No quiz returned");
       }
-
-      // Save quiz data in parent state
       setQuizData(data.quiz);
-
-      // Move to quiz page
       setPage("quiz");
     } catch (err) {
       console.error(err);

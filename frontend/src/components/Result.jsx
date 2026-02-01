@@ -1,4 +1,4 @@
-import "./Result.css";
+import "../styles/Result.css";
 
 function Result({ setPage, quizData, answers }) {
   let score = 0;

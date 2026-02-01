@@ -8,10 +8,8 @@ import Result from "./components/Result";
 function App() {
   const [page, setPage] = useState("landing");
 
-  // Quiz data from backend
   const [quizData, setQuizData] = useState([]);
 
-  // User answers
   const [answers, setAnswers] = useState({});
 
   return (
