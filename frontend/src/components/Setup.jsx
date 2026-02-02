@@ -2,7 +2,6 @@ import { useState } from "react";
 import "../styles/Setup.css";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-console.log("API_BASE_URL =", API_BASE_URL);
 function Setup({ setPage, setQuizData }) {
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
