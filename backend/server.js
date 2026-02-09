@@ -17,7 +17,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 app.use(cors());
 
-const PORT = process.env.PORT || 300;
+const PORT = process.env.PORT ;
 
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
