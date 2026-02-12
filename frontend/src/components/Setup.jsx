@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/Setup.css";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-function Setup({ setPage, setQuizData }) {
+console.log("API_BASE_URL =", API_BASE_URL);
+function Setup({ setQuizData }) {
+  const navigate = useNavigate();
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -35,7 +38,7 @@ function Setup({ setPage, setQuizData }) {
         throw new Error("No quiz returned");
       }
       setQuizData(data.quiz);
-      setPage("quiz");
+      navigate("/quiz");
     } catch (err) {
       console.error(err);
       setError("Failed to generate quiz");

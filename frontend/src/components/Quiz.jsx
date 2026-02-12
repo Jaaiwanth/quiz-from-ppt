@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/Quiz.css";
 
-function Quiz({ setPage, quizData, setAnswers }) {
+function Quiz({ quizData, setAnswers }) {
+  const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [shuffledOptions, setShuffledOptions] = useState([]);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -50,9 +52,8 @@ function Quiz({ setPage, quizData, setAnswers }) {
         {shuffledOptions.map((option, index) => (
           <button
             key={index}
-            className={`option-button ${
-              selectedOption === option ? "selected" : ""
-            }`}
+            className={`option-button ${selectedOption === option ? "selected" : ""
+              }`}
             onClick={() => handleOptionClick(option)}
           >
             {option}
@@ -80,7 +81,7 @@ function Quiz({ setPage, quizData, setAnswers }) {
 
       <button
         className="submit-button"
-        onClick={() => setPage("result")}
+        onClick={() => navigate("/result")}
       >
         Submit
       </button>

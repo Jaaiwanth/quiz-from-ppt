@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import "../styles/Result.css";
 
-function Result({ setPage, quizData, answers }) {
+function Result({ quizData, answers }) {
+  const navigate = useNavigate();
   let score = 0;
 
   quizData.forEach((q, index) => {
@@ -19,7 +21,7 @@ function Result({ setPage, quizData, answers }) {
 
       <button
         className="restart-button"
-        onClick={() => setPage("setup")}
+        onClick={() => navigate("/setup")}
       >
         Upload Another File
       </button>
