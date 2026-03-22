@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import Landing from "./components/Landing";
+import Login from "./components/Login";
 import Setup from "./components/Setup";
 import Quiz from "./components/Quiz";
 import Result from "./components/Result";
@@ -47,6 +48,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
         <Route
           path="/setup"
           element={<Setup setQuizData={setQuizData} />}

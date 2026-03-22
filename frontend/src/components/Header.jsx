@@ -17,7 +17,7 @@ function Header({ hideStartQuiz = false }) {
                     <nav className="header-nav">
                         <button
                             className="nav-button start-quiz-btn"
-                            onClick={() => navigate("/setup")}
+                            onClick={() => navigate("/login")}
                         >
                             Start Quiz
                         </button>

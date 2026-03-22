@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "firebase": "^12.11.0",
     "lucide-react": "^0.563.0",
     "ogl": "^1.0.11",
     "react": "^19.2.0",

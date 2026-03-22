@@ -52,26 +52,13 @@ function Landing() {
           </p>
           <button
             className="cta-button"
-            onClick={() => navigate("/setup")}
+            onClick={() => navigate("/login")}
           >
             <span>Get Started</span>
             <ArrowRight className="arrow-icon" size={20} />
           </button>
         </div>
-        <div className="hero-visual">
-          <div className="floating-card card-1">
-            <Upload className="card-icon" size={40} strokeWidth={2} />
-            <div className="card-text">Upload Content</div>
-          </div>
-          <div className="floating-card card-2">
-            <Bot className="card-icon" size={40} strokeWidth={2} />
-            <div className="card-text">AI Processing</div>
-          </div>
-          <div className="floating-card card-3">
-            <CheckCircle className="card-icon" size={40} strokeWidth={2} />
-            <div className="card-text">Take Quiz</div>
-          </div>
-        </div>
+        
       </section>
 
       {/* Features Section */}
