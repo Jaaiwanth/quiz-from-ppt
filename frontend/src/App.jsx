@@ -55,7 +55,7 @@ function App() {
         />
         <Route
           path="/quiz"
-          element={<Quiz quizData={quizData} setAnswers={setAnswers} />}
+          element={<Quiz quizData={quizData} answers={answers} setAnswers={setAnswers} />}
         />
         <Route
           path="/result"

@@ -2,25 +2,14 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Quiz.css";
 
-function Quiz({ quizData, setAnswers }) {
+function Quiz({ quizData, answers, setAnswers }) {
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [shuffledOptions, setShuffledOptions] = useState([]);
   const [selectedOption, setSelectedOption] = useState(null);
 
   useEffect(() => {
     if (!quizData || !quizData.length) return;
-
-    const currentQuestion = quizData[currentIndex];
-
-    if (!currentQuestion?.options) return;
-
-    const options = [...currentQuestion.options].sort(
-      () => Math.random() - 0.5
-    );
-
-    setShuffledOptions(options);
-    setSelectedOption(null);
+    setSelectedOption(answers?.[currentIndex] ?? null);
   }, [currentIndex, quizData]);
 
   if (!quizData || !quizData.length) {
@@ -49,7 +38,7 @@ function Quiz({ quizData, setAnswers }) {
       </h2>
 
       <div className="options-container">
-        {shuffledOptions.map((option, index) => (
+        {question.options.map((option, index) => (
           <button
             key={index}
             className={`option-button ${selectedOption === option ? "selected" : ""
